@@ -19,25 +19,25 @@ public class Items {
     );
     public static final SlimefunItemStack SIZED_BLOCK1 = new SlimefunItemStack("SIZED_BLOCK1",
         Material.DEEPSLATE_COAL_ORE,
-        "&r小世界空间 &7(T1 3x3)",
+        "&r小世界空间 &7(一级 3x3)",
         "&l§4放入空间绑定器",
         LoreBuilder.powerPerSecond(256)
     );
     public static final SlimefunItemStack SIZED_BLOCK2 = new SlimefunItemStack("SIZED_BLOCK2",
         Material.DEEPSLATE_COAL_ORE,
-        "&r小世界空间 &7(T2 6x6)",
+        "&r小世界空间 &7(二级 6x6)",
         "&l§4放入空间绑定器",
         LoreBuilder.powerPerSecond(512)
     );
     public static final SlimefunItemStack SIZED_BLOCK3 = new SlimefunItemStack("SIZED_BLOCK3",
         Material.DEEPSLATE_COAL_ORE,
-        "&r小世界空间 &7(T3 9x9)",
+        "&r小世界空间 &7(三级 9x9)",
         "&l§4放入空间绑定器",
         LoreBuilder.powerPerSecond(768)
     );
     public static final SlimefunItemStack SIZED_BLOCK4 = new SlimefunItemStack("SIZED_BLOCK4",
         Material.DEEPSLATE_COAL_ORE,
-        "&r小世界空间 &7(Tier 4 12x12)",
+        "&r小世界空间 &7(四级 12x12)",
         "&l§4放入空间绑定器",
         LoreBuilder.powerPerSecond(1024)
     );

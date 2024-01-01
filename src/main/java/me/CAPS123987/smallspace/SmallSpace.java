@@ -1,5 +1,27 @@
 package me.CAPS123987.smallspace;
 
+import java.util.List;
+import java.util.logging.Level;
+
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.World;
+import org.bukkit.WorldCreator;
+import org.bukkit.block.Block;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.player.PlayerTeleportEvent;
+import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
+import org.bukkit.generator.ChunkGenerator;
+import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.java.JavaPlugin;
+
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -15,29 +37,6 @@ import me.CAPS123987.machines.BlockAssigner;
 import me.CAPS123987.tabCompleater.TabC;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.World;
-import org.bukkit.WorldCreator;
-import org.bukkit.block.Block;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockBreakEvent;
-import org.bukkit.event.block.BlockPlaceEvent;
-import org.bukkit.event.player.PlayerTeleportEvent;
-import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
-import org.bukkit.generator.ChunkGenerator;
-import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.Vector;
-import org.bukkit.plugin.Plugin;
-
-import java.util.List;
-import java.util.logging.Level;
 
 
 public class SmallSpace extends JavaPlugin implements SlimefunAddon, Listener {
