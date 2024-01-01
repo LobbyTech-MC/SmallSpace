@@ -227,11 +227,11 @@ case "help":
                 pp = (Player) p;
                 Block b = pp.getTargetBlockExact(20);
                 if (!BlockStorage.hasBlockInfo(b)) {
-                    p.sendMessage("该方块没有信息");
+                    p.sendMessage("该方块没有存储信息");
                     return true;
                 }
                 if (!BlockStorage.getLocationInfo(b.getLocation(), "id").equals("TELEPORT")) {
-                    p.sendMessage("该方块不是传送方块");
+                    p.sendMessage("这个方块不是小世界空间里的方块");
                     return true;
                 }
                 BlockStorage.clearBlockInfo(b);
@@ -302,12 +302,12 @@ public void help(CommandSender p) {
 
         SlimefunItem item = BlockStorage.check(b);
         if (!(item instanceof SizedBlock)) {
-            p.sendMessage("this block is not SIZED BLOCK");
+            p.sendMessage("这个方块不是小世界空间里的方块");
             return false;
         }
 
         if (!(BlockStorage.getLocationInfo(b.getLocation(), "owner").equals(pp.getName())) && !p.hasPermission("SmallSpace.admin")) {
-            pp.sendMessage("You are not owner of this block");
+            pp.sendMessage("你不是这个方块的拥有者");
             return false;
         }
 
@@ -323,7 +323,7 @@ public void help(CommandSender p) {
         } else {
             BlockStorage.addBlockInfo(b, "Players", old + args[1] + ";");
         }
-        pp.sendMessage("Player " + args[1] + " added");
+        pp.sendMessage("玩家 " + args[1] + " 已成为这个小世界空间的成员");
         return true;
 
 
@@ -335,18 +335,18 @@ public void help(CommandSender p) {
         final Player pp = (Player) p;
         Block b = pp.getTargetBlockExact(20);
         if (!BlockStorage.hasBlockInfo(b)) {
-            p.sendMessage("this block doesn't have BlockStorage data");
+            p.sendMessage("这个方块没有存储信息");
             return false;
         }
 
         SlimefunItem item = BlockStorage.check(b);
         if (!(item instanceof SizedBlock)) {
-            p.sendMessage("this block is not SIZED BLOCK");
+            p.sendMessage("这个方块不是小世界空间里的方块");
             return false;
         }
 
         if (!(BlockStorage.getLocationInfo(b.getLocation(), "owner").equals(pp.getName())) && !p.hasPermission("SmallSpace.admin")) {
-            pp.sendMessage("You are not owner of this block");
+            pp.sendMessage("你不是这个方块的拥有者");
             return false;
         }
 
@@ -365,11 +365,11 @@ public void help(CommandSender p) {
 
             }
             BlockStorage.addBlockInfo(b, "Players", text);
-            pp.sendMessage("Player " + args[1] + " removed");
+            pp.sendMessage("玩家 " + args[1] + " 不再是这个小世界空间的成员");
 
             return true;
         } else {
-            pp.sendMessage("Player " + args[1] + " isn't registered in this block");
+            pp.sendMessage("玩家 " + args[1] + " 不是这个小世界空间的成员");
             return false;
         }
 
